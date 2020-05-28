@@ -35,7 +35,13 @@
     TipsGuideView *guide = [TipsGuideView new];
     UIWindow * window = [UIApplication sharedApplication].keyWindow;
     [guide showInView:window maskBtns:@[self.button1,self.button2,self.button3,self.button4,self.button5] withTips:@[@"点击此处进行搜索",@"点击此处进行编辑",@"举报用户",@"点击此处进行用于注册",]];
-    
+    /*
+    TipsGuideView *guide = [TipsGuideView new];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    CGRect firstRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 16 - 60, [UIApplication sharedApplication].statusBarFrame.size.height + 44 - 37, 60, 30);
+    CGRect secondRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 24 - 120, [UIApplication sharedApplication].statusBarFrame.size.height + 44 - 37, 60, 30);
+    [guide showInView:window maskRects:@[@(firstRect), @(secondRect)] withTips:@[@"点击此处进行搜索",@"点击此处进行编辑",@"举报用户",@"点击此处进行用于注册"]];
+    */
 }
 
 - (void)didReceiveMemoryWarning {
